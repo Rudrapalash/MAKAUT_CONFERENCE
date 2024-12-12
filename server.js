@@ -64,3 +64,8 @@ app.post('/update-speakers', upload.single('speakerImage'), (req, res) => {
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
 });
+
+
+function upadteDBField(field, obj) {
+    
+}

@@ -1,8 +1,11 @@
+const heroTitle =  document.getElementById('hero-title');
+
 document.addEventListener('DOMContentLoaded', async () => {
-    const loadJSON = async (url) => {
-        const response = await fetch(url);
-        return await response.json();
-    };
+    const response = await fetch("/update-hero")
+    data = await response.json()
+    heroTitle.innerText = data.heroTitle
+    
+    
 
     // Load Hero Content
     const heroData = await loadJSON('/content/hero.json');

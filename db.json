@@ -1,0 +1,26 @@
+{
+    "heroSection": {
+        "title": "dsjhgfjhsdg f",
+        "description": "sdfsdfsdfsdf",
+        "buttonURL": "https://google.com",
+        "imageURL": "https://gogole.com",
+        "videoURL": "https://google.com"
+    },
+    "aboutSection": {
+        "title": "dsjhgfjhsdg f",
+        "description": "sdfsdfsdfsdf",
+        "imageURL": "https://gogole.com"
+    },
+    "speakerSection": {
+        "1": {
+            "name": "Rudrapalash",
+            "role": "Dalal",
+            "imageURL": "https://gogole.com"
+        },
+        "2": {
+            "name": "Srijon",
+            "role": "Magi",
+            "imageURL": "https://gogole.com"
+        }
+    }
+}
