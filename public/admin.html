@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Conference Website</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!-- Include Bootstrap CSS -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script> <!-- For rich text editing -->
+</head>
+<body class="bg-light">
+
+    <div class="container my-5">
+        <h1 class="text-center mb-5">Admin Panel - Update Website Content</h1>
+
+        <!-- Update Hero Section -->
+        <section class="mb-5">
+            <h2 class="h3 mb-3">Update Hero Section</h2>
+            <form action="/update-hero" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="hero-title">Hero Title</label>
+                    <input type="text" id="hero-title" name="hero-title" class="form-control" placeholder="Enter Hero Title">
+                </div>
+
+                <div class="form-group">
+                    <label for="hero-description">Hero Description</label>
+                    <textarea id="hero-description" name="hero-description" class="form-control" placeholder="Enter Hero Description"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="hero-button-url">Hero Button URL</label>
+                    <input type="url" id="hero-button-url" name="hero-button-url" class="form-control" placeholder="Enter Button URL">
+                </div>
+
+                <div class="form-group">
+                    <label for="hero-image">Hero Image</label>
+                    <input type="file" id="hero-image" name="hero-image" class="form-control-file">
+                </div>
+
+                <div class="form-group">
+                    <label for="hero-video">Hero Video URL</label>
+                    <input type="url" id="hero-video" name="hero-video" class="form-control" placeholder="Enter Video URL">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Update Hero Section</button>
+            </form>
+        </section>
+
+        <!-- Update About Section -->
+        <section class="mb-5">
+            <h2 class="h3 mb-3">Update About Section</h2>
+            <form action="/update-about" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="about-title">About Title</label>
+                    <input type="text" id="about-title" name="about-title" class="form-control" placeholder="Enter About Title">
+                </div>
+
+                <div class="form-group">
+                    <label for="about-description">About Description</label>
+                    <textarea id="about-description" name="about-description" class="form-control" placeholder="Enter About Description"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="about-image">About Image</label>
+                    <input type="file" id="about-image" name="about-image" class="form-control-file">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Update About Section</button>
+            </form>
+        </section>
+
+        <!-- Update Speaker Section -->
+        <section class="mb-5">
+            <h2 class="h3 mb-3">Update Speaker Section</h2>
+            <form action="/update-speakers" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="speaker-name">Speaker Name</label>
+                    <input type="text" id="speaker-name" name="speaker-name" class="form-control" placeholder="Enter Speaker Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="speaker-role">Speaker Role</label>
+                    <input type="text" id="speaker-role" name="speaker-role" class="form-control" placeholder="Enter Speaker Role">
+                </div>
+
+                <div class="form-group">
+                    <label for="speaker-image">Speaker Image</label>
+                    <input type="file" id="speaker-image" name="speaker-image" class="form-control-file">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Update Speaker</button>
+            </form>
+        </section>
+
+        <!-- Update Gallery Section -->
+        <section class="mb-5">
+            <h2 class="h3 mb-3">Update Gallery Section</h2>
+            <form action="/update-gallery" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="gallery-image">Gallery Image</label>
+                    <input type="file" id="gallery-image" name="gallery-image[]" class="form-control-file" multiple>
+                </div>
+                <button type="submit" class="btn btn-primary">Update Gallery</button>
+            </form>
+        </section>
+
+        <!-- Update Countdown Timer -->
+        <section class="mb-5">
+            <h2 class="h3 mb-3">Update Countdown Timer</h2>
+            <form action="/update-countdown" method="POST">
+                <div class="form-group">
+                    <label for="countdown-days">Countdown Days</label>
+                    <input type="number" id="countdown-days" name="countdown-days" class="form-control" placeholder="Enter Days" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="countdown-hours">Countdown Hours</label>
+                    <input type="number" id="countdown-hours" name="countdown-hours" class="form-control" placeholder="Enter Hours" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="countdown-minutes">Countdown Minutes</label>
+                    <input type="number" id="countdown-minutes" name="countdown-minutes" class="form-control" placeholder="Enter Minutes" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="countdown-seconds">Countdown Seconds</label>
+                    <input type="number" id="countdown-seconds" name="countdown-seconds" class="form-control" placeholder="Enter Seconds" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Update Countdown</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#about-description'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
